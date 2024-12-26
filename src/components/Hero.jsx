@@ -5,15 +5,14 @@ import {
   FaLinkedin,
   FaTwitterSquare,
 } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5"; // Import the location icon
+import { IoLocationSharp } from "react-icons/io5";
 
 function Hero() {
   return (
     <div className="flex flex-col w-full justify-center">
       <h2 className="text-5xl animate-moveUp">Ahmad Shah</h2>
       <h3 className="pt-4 text-2xl text-gray-400 animate-moveUp">
-        Software Engineer <br />
-        F1 Enthusiast
+        Software Engineer
       </h3>
       <div className="rounded w-40 flex animate-moveUp items-end py-3">
         <IoLocationSharp className="w-6 h-6 sm:w-6 sm:h-6" />
@@ -26,15 +25,30 @@ function Hero() {
           <FaFileDownload className="w-4 h-4" />
           <span className="cursor-pointer">Resume</span>
         </button>
-        <span className="ml-3">
+        <a
+          href="https://linkedin.com/in/syed-ahmad-global"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-3"
+        >
           <FaLinkedin className="w-7 h-7 sm:w-7 sm:h-7" />
-        </span>
-        <span className="ml-3">
+        </a>
+        <a
+          href="https://twitter.com/SyedAhmadGlobal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-3"
+        >
           <FaTwitterSquare className="w-7 h-7 sm:w-7 sm:h-7" />
-        </span>
-        <span className="ml-3">
+        </a>
+        <a
+          href="https://github.com/syed-ahmad-global"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="ml-3"
+        >
           <FaGithub className="w-7 h-7 sm:w-7 sm:h-7" />
-        </span>
+        </a>
       </div>
     </div>
   );

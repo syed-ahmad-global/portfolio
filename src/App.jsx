@@ -9,12 +9,10 @@ import "./index.css";
 function App() {
   return (
     <Layout>
-      <main id="main">
-        <Hero />
-        <Work />
-        <Skills />
-        <Projects />
-      </main>
+      <Hero />
+      <Work />
+      <Skills />
+      <Projects />
     </Layout>
   );
 }
