@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   FaFileDownload,
   FaGithub,
@@ -9,6 +10,8 @@ import {
 } from "react-icons/fa";
 import { IoLocationSharp, IoMail } from "react-icons/io5";
 import { MdOutlineContentCopy, MdCheck } from "react-icons/md";
+
+import resume from "../assets/Ahmad_Resume.pdf";
 
 function Hero() {
   const [hovered, setHovered] = useState(false);
@@ -34,10 +37,14 @@ function Hero() {
       </div>
       <div className="w-full sm:w-70 flex flex-wrap xs:justify-between animate-moveUp items-center">
         <div className="pt-4">
-          <button className="w-32 h-7 flex items-center justify-center space-x-2 border border-[#fafafa] bg-transparent text-[#fafafa] rounded-[7px] hover:border-[#fafafa]">
+          <a
+            href={resume}
+            download="Ahmad_Resume.pdf"
+            className="w-32 h-7 flex items-center justify-center space-x-2 border border-[#fafafa] bg-transparent text-[#fafafa] rounded-[7px] hover:border-[#fafafa]"
+          >
             <FaFileDownload className="w-4 h-4" />
             <span className="cursor-pointer">Resume</span>
-          </button>
+          </a>
         </div>
         <a
           href="https://linkedin.com/in/syed-ahmad-global"
