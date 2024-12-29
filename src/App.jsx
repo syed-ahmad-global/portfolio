@@ -5,18 +5,22 @@ import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
 import Layout from "./components/Layout";
+import Navbar from "./components/Navbar.jsx";
 
 import "./index.css";
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <Work />
-      <Skills />
-      <Projects />
-      <Footer />
-    </Layout>
+    <>
+      <Navbar />
+      <Layout>
+        <Hero />
+        <Work />
+        <Skills />
+        <Projects />
+        <Footer />
+      </Layout>
+    </>
   );
 }
 
