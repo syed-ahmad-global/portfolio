@@ -19,7 +19,7 @@ const Footer = () => {
       <hr className="w-full border-t border-gray-300/20 my-4" />
       <div className="w-full flex flex-row justify-between moveUpAni bottom-0 items-center">
         <div className="flex">
-          <span className="ml-3 pt-4">
+          <span className="ml-3 pt-4 dark:text-custom-gray text-custom-white dark:text-custom-gray text-custom-white">
             <TbCodeAsterisk className="w-7 h-7 sm:w-7 sm:h-7" />
           </span>
         </div>
@@ -29,7 +29,7 @@ const Footer = () => {
               href="https://linkedin.com/in/syed-ahmad-global"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 pt-4"
+              className="ml-3 pt-4 dark:text-custom-gray text-custom-white"
             >
               <FaLinkedin className="w-7 h-7 sm:w-7 sm:h-7" />
             </a>
@@ -39,7 +39,7 @@ const Footer = () => {
               href="https://linktr.ee/syed_ahmad_global"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-3 pt-4"
+              className="ml-3 pt-4 dark:text-custom-gray text-custom-white"
             >
               <FaLink className="w-7 h-7 sm:w-7 sm:h-7" />
             </a>
@@ -53,7 +53,7 @@ const Footer = () => {
               onBlur={() => setHovered(false)}
               tabIndex={0}
             >
-              <IoMail className="w-7 h-7 sm:w-7 sm:h-7 transition-colors duration-200" />
+              <IoMail className="w-7 h-7 sm:w-7 sm:h-7 dark:text-custom-gray text-custom-white transition-colors duration-200" />
               {hovered && (
                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex space-x-2 bg-white px-3 py-2 rounded shadow-md">
                   <a

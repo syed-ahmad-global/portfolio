@@ -30,12 +30,12 @@ const Work = () => {
                   className="transition-all duration-500 opacity-100 translate-x-0"
                   role="tabpanel"
                 >
-                  <div className="mt-2 ring-offset-background">
-                    <div className="rounded-xl border bg-card text-card-foreground shadow">
+                  <div className="mt-2 ">
+                    <div className="rounded-xl border dark:border-gray-700 shadow">
                       <div className="p-0">
                         <div className="relative">
                           <div>
-                            <ul className="ml-10 border-l">
+                            <ul className="ml-10 border-l dark:border-gray-700">
                               {/* Work Experience Entry 1 */}
                               <li className="relative ml-10 py-4">
                                 <a
@@ -44,25 +44,25 @@ const Work = () => {
                                   className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
                                   href="https://medtronix.world/"
                                 >
-                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
                                     <img
-                                      className="aspect-square h-full w-full bg-background object-contain"
+                                      className="aspect-square h-full w-full object-contain"
                                       alt="Medtronix Systems"
                                       src={medtronixPng}
                                     />
                                   </span>
                                 </a>
                                 <div className="flex flex-1 flex-col justify-start gap-1">
-                                  <time className="text-xs text-muted-foreground">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
                                     Sep 2022 - Nov 2024
                                   </time>
-                                  <h2 className="font-semibold leading-none">
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
                                     Frontend Developer
                                   </h2>
-                                  <p className="text-sm text-muted-foreground">
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
                                     Medtronix Systems
                                   </p>
-                                  <ul className="list-disc list-inside text-muted-foreground text-sm">
+                                  <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
                                       Developed and maintained frontend
                                       applications using React.js.
@@ -83,7 +83,7 @@ const Work = () => {
                                   className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
                                   href="https://servicesground.com"
                                 >
-                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
                                     <img
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Services Software House"
@@ -92,16 +92,16 @@ const Work = () => {
                                   </span>
                                 </a>
                                 <div className="flex flex-1 flex-col justify-start gap-1">
-                                  <time className="text-xs text-muted-foreground">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
                                     Aug 2022 - Dec 2022
                                   </time>
-                                  <h2 className="font-semibold leading-none">
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
                                     Frontend Developer (Internship)
                                   </h2>
-                                  <p className="text-sm text-muted-foreground">
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
                                     Services Ground
                                   </p>
-                                  <ul className="list-disc list-inside text-muted-foreground text-sm">
+                                  <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
                                       Assisted in the development of web
                                       applications using HTML, CSS, and
@@ -137,11 +137,11 @@ const Work = () => {
                   role="tabpanel"
                 >
                   <div className="mt-2 ring-offset-background">
-                    <div className="rounded-xl border bg-card text-card-foreground shadow">
+                    <div className="rounded-xl border dark:border-gray-700 shadow">
                       <div className="p-0">
                         <div className="relative">
                           <div>
-                            <ul className="ml-10 border-l">
+                            <ul className="ml-10 border-l dark:border-gray-700">
                               {/* Education Entry 1 */}
                               <li className="relative ml-10 py-4">
                                 <a
@@ -150,7 +150,7 @@ const Work = () => {
                                   className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
                                   href="https://www.uosahiwal.edu.pk"
                                 >
-                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
                                     <img
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="University of Sahiwal"
@@ -159,13 +159,13 @@ const Work = () => {
                                   </span>
                                 </a>
                                 <div className="flex flex-1 flex-col justify-start gap-1">
-                                  <time className="text-xs text-muted-foreground">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
                                     2020 - 2024
                                   </time>
-                                  <h2 className="font-semibold leading-none">
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
                                     University of Sahiwal
                                   </h2>
-                                  <p className="text-sm text-muted-foreground">
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
                                     Bachelor's in Software Engineering
                                   </p>
                                 </div>
@@ -179,7 +179,7 @@ const Work = () => {
                                   className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
                                   href="https://pgc.edu"
                                 >
-                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border">
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
                                     <img
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Punjab Group of Colleges"
@@ -188,13 +188,13 @@ const Work = () => {
                                   </span>
                                 </a>
                                 <div className="flex flex-1 flex-col justify-start gap-1">
-                                  <time className="text-xs text-muted-foreground">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
                                     2019 - 2020
                                   </time>
-                                  <h2 className="font-semibold leading-none">
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
                                     Punjab College Sahiwal
                                   </h2>
-                                  <p className="text-sm text-muted-foreground">
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
                                     Intermediate
                                   </p>
                                 </div>

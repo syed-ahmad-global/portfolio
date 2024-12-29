@@ -15,10 +15,10 @@ const ProjectCard = ({ project }) => {
         />
       </div>
       <div className="p-6 pt-0 flex flex-col gap-2">
-        <div className="font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+        <div className="font-bold dark:text-neutral-600 text-neutral-200 mb-2 mt-2">
           {project.title}
         </div>
-        <div className="prose max-w-full text-pretty text-xs text-muted-foreground dark:prose-invert">
+        <div className="prose max-w-full text-pretty text-xs dark:text-neutral-600 text-neutral-200 dark:prose-invert">
           <p>{project.description}</p>
         </div>
       </div>
@@ -40,7 +40,7 @@ const ProjectCard = ({ project }) => {
               href={project.sourceLink}
               rel="noopener noreferrer"
             >
-              <div className="flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 border-transparent bg-white text-black shadow hover:bg-gray-300 gap-2 px-2 py-1 text-xs">
+              <div className="flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 border-transparent bg-white dark:bg-black text-black dark:text-white shadow hover:bg-gray-300 gap-2 px-2 py-1 text-xs">
                 <FiGithub className="w-3 h-3" />
                 Source
               </div>
@@ -53,7 +53,7 @@ const ProjectCard = ({ project }) => {
               href={project.websiteLink}
               rel="noopener noreferrer"
             >
-              <div className="flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 border-transparent bg-white text-black shadow hover:bg-gray-300 gap-2 px-2 py-1 text-xs">
+              <div className="flex items-center rounded-md border font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 border-transparent bg-white dark:bg-black text-black dark:text-white shadow hover:bg-gray-300 gap-2 px-2 py-1 text-xs">
                 <FiGlobe className="w-3 h-3" />
                 Website
               </div>
