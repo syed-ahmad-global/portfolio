@@ -78,8 +78,14 @@ function Hero() {
         >
           <FaLink className="w-7 h-7 sm:w-7 sm:h-7" />
         </a>
+        {/* Email Anchor for Smaller Screens */}
+        <a href="mailto:ahmad53.work@gmail.com" className="md:hidden ml-3 pt-4">
+          <IoMail className="w-7 h-7 sm:w-7 sm:h-7" />
+        </a>
+
+        {/* Email Icon for Larger Screens */}
         <div
-          className="relative ml-3 cursor-pointer pt-4"
+          className="hidden md:flex relative ml-3 cursor-pointer pt-4"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onFocus={() => setHovered(true)}
