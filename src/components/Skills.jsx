@@ -3,7 +3,7 @@ import React from "react";
 function Skills() {
   return (
     <div className="mt-8">
-      <span className="text-xl sm:text-4xl md:text-4xl lg:text-4xl dark:text-custom-gray text-custom-white font-semibold ">
+      <span className="text-xl sm:text-4xl md:text-4xl lg:text-4xl dark:text-custom-gray text-custom-white font-semibold">
         Skills
       </span>
       <div className="flex flex-wrap pt-4 sm:pt-8 w-full">
