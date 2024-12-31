@@ -12,6 +12,15 @@ export default {
         'custom-gray': '#1c1d26',
         'custom-dark-gray': '#353944',
       },
+      animation: {
+        "sound-wave": "pulse-wave 1s infinite",
+      },
+      keyframes: {
+        "pulse-wave": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.7" },
+        },
+      },
     },
   },
   plugins: [],

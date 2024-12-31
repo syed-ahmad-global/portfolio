@@ -7,8 +7,8 @@ import {
   FaTwitterSquare,
   FaLink,
   FaPaperPlane,
-  FaVolumeUp,
 } from "react-icons/fa";
+import VolumeUpIcon from "./VolumeUpIcon.jsx";
 
 import { IoLocationSharp, IoMail } from "react-icons/io5";
 import { MdOutlineContentCopy, MdCheck } from "react-icons/md";
@@ -31,7 +31,7 @@ function Hero() {
         <h2 className="text-4xl sm:text-5xl text-white dark:text-gray-900 w-fit">
           Ahmad Shah
         </h2>
-        <FaVolumeUp className="w-4 h-4 sm:w-5 sm:h-5 text-[#fafafa] dark:text-gray-700" />
+        <VolumeUpIcon className="w-4 h-4 sm:w-5 sm:h-5 text-[#fafafa] dark:text-gray-700" />
       </div>
       <h3 className="pt-4 text-2xl text-gray-400 dark:text-gray-600">
         Software Engineer
