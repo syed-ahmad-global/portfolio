@@ -56,10 +56,10 @@ This is a minimal, modern, responsive 🖥️📱 portfolio built using
 2. Run the Docker container 📦:
 
    ```bash
-   docker run -p 3000:3000 portfolio
+   docker run -p 8080:80 portfolio
    ```
 
-The app will be accessible at `https://localhost/3000` 🌐.
+The app will be accessible at `https://localhost/8080` 🌐.
 
 ---
 
