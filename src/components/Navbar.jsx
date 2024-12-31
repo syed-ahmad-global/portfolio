@@ -8,7 +8,8 @@ import { TbCodeAsterisk } from "react-icons/tb";
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const location = useLocation();
-  const isSuccessPage = location.pathname === "/success";
+  const isSuccessOrFailurePage =
+    location.pathname === "/success" || location.pathname === "/failure";
 
   // Handle theme toggle
   useEffect(() => {
@@ -35,7 +36,7 @@ const Navbar = () => {
 
             <div className="flex items-center space-x-4">
               {/* Conditionally render the Contact button using NavLink */}
-              {!isSuccessPage && (
+              {!isSuccessOrFailurePage && (
                 <>
                   <NavLink
                     to="/"

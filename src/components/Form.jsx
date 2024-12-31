@@ -40,7 +40,7 @@ const ContactForm = () => {
         resetForm();
         navigate("/success");
       } else {
-        alert("Failed to send the message. Please try again later.");
+        navigate("/failure");
       }
     } catch (error) {
       console.error("Error sending form data:", error);
