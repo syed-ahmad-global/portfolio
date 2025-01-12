@@ -12,6 +12,7 @@ const ProjectCard = ({ project }) => {
           className="h-full w-full object-cover rounded-xl"
           alt={project.title}
           src={project.imageSrc}
+          draggable="false"
         />
       </div>
       <div className="p-6 pt-0 flex flex-col gap-2">

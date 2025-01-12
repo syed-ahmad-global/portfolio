@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import TabSelector from "./TabSelector";
+import techXLogo from "../assets/images/tech_axe_logo.jpeg";
 import medtronixPng from "../assets/images/Medtronix.png";
-import servicesGroundPng from "../assets/images/serviceGround.png";
+import servicesGroundPng from "../assets/images/serviceGround.jpeg";
 import universityOfSahiwalLogo from "../assets/images/universityOfSahiwal.png";
 import pgcLogo from "../assets/images/pgcLogo.png";
 
@@ -42,6 +43,46 @@ const Work = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
+                                  href="https://thetechaxe.com/"
+                                >
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
+                                    <img
+                                      className="aspect-square h-full w-full bg-background object-contain"
+                                      alt="Services Software House"
+                                      src={techXLogo}
+                                      draggable="false"
+                                    />
+                                  </span>
+                                </a>
+                                <div className="flex flex-1 flex-col justify-start gap-1">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
+                                    Jan 2024 - Current
+                                  </time>
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
+                                    Frontend Developer
+                                  </h2>
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
+                                    Tech Axe
+                                  </p>
+                                  <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
+                                    <li>
+                                      Development of web applications using
+                                      ReactJS Bootstrap5 Tailwind CSS Material
+                                      UI
+                                    </li>
+                                    <li>
+                                      Implemented latest technologies with web.
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              {/* Work Experience Entry 2 */}
+                              <li className="relative ml-10 py-4">
+                                <a
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
                                   href="https://medtronix.world/"
                                 >
                                   <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
@@ -49,6 +90,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full object-contain"
                                       alt="Medtronix Systems"
                                       src={medtronixPng}
+                                      draggable="false"
                                     />
                                   </span>
                                 </a>
@@ -75,7 +117,7 @@ const Work = () => {
                                 </div>
                               </li>
 
-                              {/* Work Experience Entry 2 */}
+                              {/* Work Experience Entry 3 */}
                               <li className="relative ml-10 py-4">
                                 <a
                                   target="_blank"
@@ -88,6 +130,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Services Software House"
                                       src={servicesGroundPng}
+                                      draggable="false"
                                     />
                                   </span>
                                 </a>
@@ -155,6 +198,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="University of Sahiwal"
                                       src={universityOfSahiwalLogo}
+                                      draggable="false"
                                     />
                                   </span>
                                 </a>
@@ -184,6 +228,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Punjab Group of Colleges"
                                       src={pgcLogo}
+                                      draggable="false"
                                     />
                                   </span>
                                 </a>

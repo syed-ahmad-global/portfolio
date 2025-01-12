@@ -2,8 +2,9 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Layout from "./Layout";
-
 import { FaPaperPlane, FaCircleNotch } from "react-icons/fa";
 
 const ContactForm = () => {
@@ -38,13 +39,15 @@ const ContactForm = () => {
 
       if (response.ok) {
         resetForm();
+        toast.success("Message sent successfully!");
         navigate("/success");
       } else {
+        toast.error("Failed to send message. Please try again.");
         navigate("/failure");
       }
     } catch (error) {
+      toast.error("Failed to send message. Please try again.");
       console.error("Error sending form data:", error);
-      alert("An error occurred. Please try again later.");
     } finally {
       setSubmitting(false);
     }
@@ -52,6 +55,7 @@ const ContactForm = () => {
 
   return (
     <Layout>
+      <ToastContainer />
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
