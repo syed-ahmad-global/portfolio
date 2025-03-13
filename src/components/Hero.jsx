@@ -13,7 +13,7 @@ import VolumeUpIcon from "./VolumeUpIcon.jsx";
 import { IoLocationSharp, IoMail } from "react-icons/io5";
 import { MdOutlineContentCopy, MdCheck } from "react-icons/md";
 
-import resume from "../assets/Ahmad_Resume.pdf";
+import resume from "../assets/AhmadShah_Resume.pdf";
 
 function Hero() {
   const [hovered, setHovered] = useState(false);
