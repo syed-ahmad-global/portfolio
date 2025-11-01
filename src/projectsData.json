@@ -2,7 +2,7 @@
   {
     "title": "Uranus",
     "description": "Uranus is fully responsive website. Main theme of this portfolio website of a company.",
-    "imageSrc": "imgs/projects/uranus.jpg",
+    "imageSrc": "imgs/projects/uranus.webp",
     "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
     "sourceLink": "https://github.com/syed-ahmad-global/Uranus",
     "websiteLink": "https://uranus1.netlify.app"
@@ -10,7 +10,7 @@
   {
     "title": "Nava",
     "description": "Nava is fully responsive website. Main theme of this website is renting, buying and selling of boat.",
-    "imageSrc": "imgs/projects/nava.jpg",
+    "imageSrc": "imgs/projects/nava.webp",
     "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
     "sourceLink": "https://github.com/syed-ahmad-global/Nava",
     "websiteLink": "https://nava1.netlify.app"

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import TabSelector from "./TabSelector";
-import techXLogo from "../assets/images/tech_axe_logo.jpeg";
-import medtronixPng from "../assets/images/Medtronix.png";
-import servicesGroundPng from "../assets/images/serviceGround.jpeg";
-import universityOfSahiwalLogo from "../assets/images/universityOfSahiwal.png";
-import pgcLogo from "../assets/images/pgcLogo.png";
+import techXLogo from "../assets/images/tech_axe_logo.webp";
+import medtronixPng from "../assets/images/Medtronix.webp";
+import servicesGroundPng from "../assets/images/serviceGround.webp";
+import universityOfSahiwalLogo from "../assets/images/universityOfSahiwal.webp";
+import pgcLogo from "../assets/images/pgcLogo.webp";
 
 const Work = () => {
   const [activeTab, setActiveTab] = useState("work");
