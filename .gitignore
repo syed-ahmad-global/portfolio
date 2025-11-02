@@ -1,5 +1,16 @@
-# Logs
-logs
+# =====================================
+# 🔧 Dependencies & Build Artifacts
+# =====================================
+node_modules/
+dist/
+build/
+dist-ssr/
+*.local
+
+# =====================================
+# 🧾 Logs
+# =====================================
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,21 +18,78 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# =====================================
+# ⚙️ Environment Files
+# =====================================
+.env
+.env.*.local
+.env.local
+# (keep sample for reference)
+!.env.example
 
-# Editor directories and files
+# =====================================
+# 🧠 IDE & Editor Settings
+# =====================================
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.iml
 
-# Claude Code settings (keep local)
+# =====================================
+# 🧹 System Files
+# =====================================
+.DS_Store
+Thumbs.db
+
+# =====================================
+# 🧪 Testing / Coverage
+# =====================================
+coverage/
+*.lcov
+
+# =====================================
+# 📦 Package Managers
+# =====================================
+.pnpm-debug.log*
+.yarn/*
+.yarn-cache/
+.yarn-integrity
+.npm/
+.npmrc
+.yarnrc
+.pnpm-store/
+
+# =====================================
+# 🤖 Framework Specific (optional)
+# =====================================
+# Vite cache
+.vite/
+
+# Next.js
+.next/
+out/
+
+# SvelteKit
+.svelte-kit/
+
+# Astro
+.astro/
+
+# =====================================
+# 🧍 AI / Local tools
+# =====================================
 .claude/
+.openai/
+.chatgpt/
+
+# =====================================
+# 📄 Misc
+# =====================================
+*.bak
+*.tmp
+*.temp

@@ -4,14 +4,14 @@ import { FiGithub, FiGlobe } from "react-icons/fi";
 const ProjectCard = ({ project }) => {
   return (
     <div
-      className="rounded-xl border bg-card text-card-foreground shadow flex flex-col"
-      style={{ borderColor: "rgb(156, 163, 175)" }}
+      className="rounded-xl border border-gray-400 bg-card text-card-foreground shadow flex flex-col"
     >
       <div className="flex w-full max-h-[15rem] min-h-[15rem] rounded-xl flex-col space-y-1.5 p-6 pb-2 skeleton relative">
         <img
           className="h-full w-full object-cover rounded-xl"
           alt={project.title}
           src={project.imageSrc}
+          loading="lazy"
           draggable="false"
         />
       </div>

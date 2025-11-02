@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import soundTrack from "../assets/AhmadShahPronunciation.mp3";
 
 const VolumeIcon = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const audio = new Audio(soundTrack);
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    // Create audio object only once
+    audioRef.current = new Audio(soundTrack);
+
+    // Set up event listener for when audio ends
+    const handleAudioEnd = () => setIsPlaying(false);
+    audioRef.current.addEventListener('ended', handleAudioEnd);
+
+    // Cleanup function
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener('ended', handleAudioEnd);
+        audioRef.current.pause();
+        audioRef.current = null;
+      }
+    };
+  }, []);
 
   const handlePlay = () => {
-    if (!isPlaying) {
-      audio.play();
+    if (!isPlaying && audioRef.current) {
+      audioRef.current.play();
       setIsPlaying(true);
-      audio.onended = () => setIsPlaying(false);
     }
   };
   return (
