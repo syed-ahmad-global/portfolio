@@ -50,6 +50,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Services Software House"
                                       src={techXLogo}
+                                      loading="lazy"
                                       draggable="false"
                                     />
                                   </span>
@@ -90,6 +91,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full object-contain"
                                       alt="Medtronix Systems"
                                       src={medtronixPng}
+                                      loading="lazy"
                                       draggable="false"
                                     />
                                   </span>
@@ -130,6 +132,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Services Software House"
                                       src={servicesGroundPng}
+                                      loading="lazy"
                                       draggable="false"
                                     />
                                   </span>
@@ -198,6 +201,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="University of Sahiwal"
                                       src={universityOfSahiwalLogo}
+                                      loading="lazy"
                                       draggable="false"
                                     />
                                   </span>
@@ -228,6 +232,7 @@ const Work = () => {
                                       className="aspect-square h-full w-full bg-background object-contain"
                                       alt="Punjab Group of Colleges"
                                       src={pgcLogo}
+                                      loading="lazy"
                                       draggable="false"
                                     />
                                   </span>
