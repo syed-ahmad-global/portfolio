@@ -1,106 +1,131 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Headroom from "react-headroom";
 import { NavLink, useLocation } from "react-router-dom";
 
-import { FaSun, FaMoon, FaArrowLeft } from "react-icons/fa";
+import { FaSun, FaMoon, FaArrowLeft, FaDesktop } from "react-icons/fa";
 import { TbCodeAsterisk } from "react-icons/tb";
 
+/**
+ * Theme options for the application
+ * @readonly
+ * @enum {string}
+ */
+const THEMES = {
+  /** Light theme mode */
+  LIGHT: 'light',
+  /** Dark theme mode */
+  DARK: 'dark',
+  /** System theme mode (follows OS preference) */
+  SYSTEM: 'system'
+};
+
+/**
+ * Navbar component with theme switching functionality
+ * @returns {JSX.Element} The rendered navbar
+ */
 const Navbar = () => {
   const location = useLocation();
-  const isSuccessOrFailurePage =
-    location.pathname === "/success" || location.pathname === "/failure";
+  const isSuccessOrFailurePage = ["/success", "/failure"].includes(location.pathname);
 
-  // Initialize theme from localStorage or system preference
-  const getInitialTheme = () => {
+  /**
+   * Gets the initial theme from localStorage or defaults to system preference
+   * @returns {string} The initial theme value
+   */
+  const getInitialTheme = useCallback(() => {
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme === 'dark';
-    }
-    // Use system preference as default and save it
-    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    localStorage.setItem('theme', systemPrefersDark ? 'dark' : 'light');
-    return systemPrefersDark;
-  };
-
-  const [darkMode, setDarkMode] = useState(() => {
-    const initialTheme = getInitialTheme();
-    // Apply theme immediately during initialization
-    if (initialTheme) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-    return initialTheme;
-  });
-
-  // Handle theme toggle and save to localStorage
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem('theme', 'light');
-    }
-  }, [darkMode]);
-
-  // Listen for system theme changes
-  useEffect(() => {
-    const handleSystemThemeChange = (e) => {
-      const currentTheme = localStorage.getItem('theme');
-      // Only update if current theme matches the old system preference
-      const wasFollowingSystem = currentTheme === 'dark' && !e.matches ||
-                                currentTheme === 'light' && e.matches;
-
-      if (wasFollowingSystem) {
-        setDarkMode(e.matches);
-        localStorage.setItem('theme', e.matches ? 'dark' : 'light');
-      }
-    };
-
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    mediaQuery.addEventListener('change', handleSystemThemeChange);
-
-    return () => {
-      mediaQuery.removeEventListener('change', handleSystemThemeChange);
-    };
+    return Object.values(THEMES).includes(savedTheme) ? savedTheme : THEMES.SYSTEM;
   }, []);
 
-  return (
+  /**
+   * Applies the theme to the document element
+   * Note: CSS logic is inverted - dark class = light theme, no dark class = dark theme
+   * @param {string} themeSetting - The theme to apply
+   */
+  const applyTheme = useCallback((themeSetting) => {
+    const isSystemDark = themeSetting === THEMES.SYSTEM
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+      : themeSetting === THEMES.DARK;
+
+    document.documentElement.classList.toggle("dark", !isSystemDark);
+  }, []);
+
+const [theme, setTheme] = useState(() => getInitialTheme());
+
+// Apply theme on initial mount and handle theme changes
+useEffect(() => {
+  applyTheme(theme);
+  localStorage.setItem('theme', theme);
+}, [theme, applyTheme]);
+
+// Listen for system theme changes only when theme is set to 'system'
+useEffect(() => {
+  if (theme !== THEMES.SYSTEM) return;
+
+  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+  const handleSystemThemeChange = () => applyTheme(THEMES.SYSTEM);
+
+  mediaQuery.addEventListener('change', handleSystemThemeChange);
+  return () => mediaQuery.removeEventListener('change', handleSystemThemeChange);
+}, [theme, applyTheme]);
+
+/**
+ * Cycles through theme states: Light → Dark → System → Light
+ */
+const cycleTheme = useCallback(() => {
+  setTheme(prevTheme => {
+    switch (prevTheme) {
+      case THEMES.LIGHT: return THEMES.DARK;
+      case THEMES.DARK: return THEMES.SYSTEM;
+      default: return THEMES.LIGHT;
+    }
+  });
+}, []);
+
+/**
+ * Returns the appropriate icon for the current theme
+ * @param {string} currentTheme - The current theme value
+ * @returns {JSX.Element} The theme icon component
+ */
+const getThemeIcon = useCallback((currentTheme) => {
+  switch (currentTheme) {
+    case THEMES.LIGHT: return <FaSun className="w-4 h-4" aria-hidden="true" />;
+    case THEMES.DARK: return <FaMoon className="w-4 h-4" aria-hidden="true" />;
+    case THEMES.SYSTEM: return <FaDesktop className="w-4 h-4" aria-hidden="true" />;
+    default: return <FaDesktop className="w-4 h-4" aria-hidden="true" />;
+  }
+}, []);
+
+// Common styling for navigation buttons
+const navButtonClass = "px-4 py-2 bg-slate-400/20 backdrop-blur-sm border border-white/20 dark:border-gray-800/20 text-white dark:text-gray-800 shadow-sm rounded-md text-sm font-medium transition-all duration-200";
+
+return (
     <Headroom className="w-full">
-      <nav className="bg-custom-gray dark:bg-white">
+      <nav className="bg-custom-gray dark:bg-white transition-colors duration-200">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0">
-              <NavLink
-                to="/"
-                className="text-xl font-bold text-white dark:text-gray-800"
-              >
-                <TbCodeAsterisk className="w-7 h-7 sm:w-7 sm:h-7" />
-              </NavLink>
-            </div>
+            <NavLink
+              to="/"
+              className="flex-shrink-0 text-xl font-bold text-white dark:text-gray-800"
+            >
+              <TbCodeAsterisk className="w-7 h-7" />
+            </NavLink>
 
             <div className="flex items-center space-x-4">
-              {/* Conditionally render the Contact button using NavLink */}
               {!isSuccessOrFailurePage && (
                 <>
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
-                      isActive
-                        ? "hidden"
-                        : "px-4 py-2 bg-slate-400 bg-opacity-20 backdrop-filter backdrop-blur-sm border border-white dark:border-gray-800 border-opacity-20 text-white dark:text-gray-800 shadow-sm rounded-md text-sm font-medium flex items-center gap-1"
+                      isActive ? "hidden" : `${navButtonClass} flex items-center gap-1`
                     }
                   >
                     <FaArrowLeft />
                     Back
                   </NavLink>
                   <NavLink
-                    to="/contact" // Specify the target path to navigate to
+                    to="/contact"
                     className={({ isActive }) =>
-                      isActive
-                        ? "hidden"
-                        : "px-4 py-2 bg-slate-400 bg-opacity-20 backdrop-filter backdrop-blur-sm border border-white dark:border-gray-800 border-opacity-20 text-white dark:text-gray-800 shadow-sm rounded-md text-sm font-medium"
+                      isActive ? "hidden" : navButtonClass
                     }
                   >
                     Contact Me
@@ -108,25 +133,18 @@ const Navbar = () => {
                 </>
               )}
 
-              {/* Dark Mode Toggle */}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={cycleTheme}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
+                  if (["Enter", " "].includes(e.key)) {
                     e.preventDefault();
-                    setDarkMode(!darkMode);
+                    cycleTheme();
                   }
                 }}
-                aria-label={`Switch to ${darkMode ? "light" : "dark"} mode`}
-                className="p-2 bg-slate-400 bg-opacity-20 backdrop-filter backdrop-blur-sm border border-white dark:border-gray-800 border-opacity-20 text-gray-800 dark:text-white shadow-sm rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200"
+                aria-label={`Switch theme. Current theme: ${theme}`}
+                className="p-2 bg-slate-400/20 backdrop-blur-sm border border-white/20 dark:border-gray-800/20 text-white dark:text-gray-800 shadow-sm rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200"
               >
-                <span className="text-white dark:text-gray-800">
-                  {darkMode ? (
-                    <FaSun className="w-4 h-4" aria-hidden="true" />
-                  ) : (
-                    <FaMoon className="w-4 h-4" aria-hidden="true" />
-                  )}
-                </span>
+                {getThemeIcon(theme)}
               </button>
             </div>
           </div>
