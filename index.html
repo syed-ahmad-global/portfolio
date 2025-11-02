@@ -1,49 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Syed Ahmad's Portfolio - Full Stack Developer & Software Engineer. Specializing in React, Node.js, and modern web technologies." />
-    <meta name="keywords" content="portfolio, web developer, full stack, react, node.js, javascript, software engineer, syed ahmad" />
-    <meta name="author" content="Syed Ahmad" />
-    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>Ahmad Shah - Frontend Developer & Software Engineer | Portfolio</title>
+    <meta name="description" content="Professional portfolio of Ahmad Shah, a Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences." />
+    <meta name="keywords" content="Ahmad Shah, frontend developer, software engineer, web developer, React.js, ReactJS, Bootstrap5, Tailwind CSS, Material UI, JavaScript, HTML5, CSS3, Git, GitHub, web development, UI/UX, responsive design, Punjab, Pakistan, portfolio, React developer" />
+    <meta name="author" content="Ahmad Shah" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#1c1d26" />
+
+    <!-- Language and Region -->
+    <meta http-equiv="content-language" content="en">
+    <meta name="geo.region" content="PK-PB" />
+    <meta name="geo.placename" content="Punjab, Pakistan" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://syed-ahmad-global.github.io/portfolio/" />
+
+    <!-- Website Verification -->
+    <meta name="generator" content="React + Vite" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Ahmad Shah - Portfolio" />
     <meta property="og:url" content="https://syed-ahmad-global.github.io/portfolio/" />
-    <meta property="og:title" content="Syed Ahmad - Full Stack Developer Portfolio" />
-    <meta property="og:description" content="Full Stack Developer & Software Engineer. Specializing in React, Node.js, and modern web technologies." />
-    <meta property="og:image" content="https://syed-ahmad-global.github.io/portfolio/og-image.jpg" />
+    <meta property="og:title" content="Ahmad Shah - Frontend Developer & Software Engineer" />
+    <meta property="og:description" content="Professional portfolio of Ahmad Shah, a Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences." />
+    <meta property="og:image" content="https://syed-ahmad-global.github.io/portfolio/imgs/og-image.png" />
+    <meta property="og:image:secure_url" content="https://syed-ahmad-global.github.io/portfolio/imgs/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="Ahmad Shah - Frontend Developer Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://syed-ahmad-global.github.io/portfolio/" />
-    <meta property="twitter:title" content="Syed Ahmad - Full Stack Developer Portfolio" />
-    <meta property="twitter:description" content="Full Stack Developer & Software Engineer. Specializing in React, Node.js, and modern web technologies." />
-    <meta property="twitter:image" content="https://syed-ahmad-global.github.io/portfolio/og-image.jpg" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@syedahmad_global" />
+    <meta name="twitter:creator" content="@syedahmad_global" />
+    <meta name="twitter:url" content="https://syed-ahmad-global.github.io/portfolio/" />
+    <meta name="twitter:title" content="Ahmad Shah - Frontend Developer & Software Engineer" />
+    <meta name="twitter:description" content="Professional portfolio of Ahmad Shah, a Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences." />
+    <meta name="twitter:image" content="https://syed-ahmad-global.github.io/portfolio/imgs/og-image.png" />
+    <meta name="twitter:image:alt" content="Ahmad Shah - Frontend Developer Portfolio" />
 
-    <!-- Favicon -->
+    <!-- Additional Meta Tags -->
+    <meta name="application-name" content="Ahmad Shah Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Ahmad Shah" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-TileColor" content="#1c1d26" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- Favicon and Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1c1d26" />
 
-    <!-- Preconnect for performance -->
+    <!-- DNS Prefetch and Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
 
-    <title>Syed Ahmad - Full Stack Developer Portfolio</title>
+    <!-- Performance and Security -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" /></noscript>
 
-    <!-- Structured Data -->
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Syed Ahmad",
-      "url": "https://syed-ahmad-global.github.io/portfolio/",
-      "sameAs": [
-        "https://linktr.ee/syed_ahmad_global"
-      ],
-      "jobTitle": "Full Stack Developer",
-      "knowsAbout": ["React", "Node.js", "JavaScript", "Web Development", "Software Engineering"]
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://syed-ahmad-global.github.io/portfolio/#person",
+          "name": "Ahmad Shah",
+          "url": "https://syed-ahmad-global.github.io/portfolio/",
+          "sameAs": [
+            "https://linktr.ee/syed_ahmad_global",
+            "https://github.com/syed-ahmad-global",
+            "https://www.linkedin.com/in/syed-ahmad-global",
+            "https://twitter.com/syedahmad_global"
+          ],
+          "jobTitle": "Frontend Developer",
+          "description": "Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences.",
+          "knowsAbout": [
+            "React.js",
+            "ReactJS",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "Bootstrap5",
+            "Tailwind CSS",
+            "Material UI",
+            "Git",
+            "GitHub",
+            "Responsive Design",
+            "UI/UX Design",
+            "Frontend Development",
+            "Web Development",
+            "Software Engineering",
+            "Modern JavaScript",
+            "Component-Based Architecture",
+            "CSS Frameworks"
+          ],
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "Tech Axe",
+              "startDate": "2024-01",
+              "description": "Frontend Developer developing web applications using ReactJS, Bootstrap5, Tailwind CSS, and Material UI"
+            },
+            {
+              "@type": "Organization",
+              "name": "Medtronix Systems",
+              "startDate": "2022-09",
+              "endDate": "2024-11",
+              "description": "Frontend Developer developing and maintaining frontend applications using React.js"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "Pakistan",
+            "addressRegion": "Punjab"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://syed-ahmad-global.github.io/portfolio/#website",
+          "url": "https://syed-ahmad-global.github.io/portfolio/",
+          "name": "Ahmad Shah - Portfolio",
+          "description": "Professional portfolio of Ahmad Shah, a Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences.",
+          "publisher": {
+            "@id": "https://syed-ahmad-global.github.io/portfolio/#person"
+          },
+          "inLanguage": "en-US",
+          "isAccessibleForFree": true
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://syed-ahmad-global.github.io/portfolio/#webpage",
+          "url": "https://syed-ahmad-global.github.io/portfolio/",
+          "name": "Ahmad Shah - Frontend Developer & Software Engineer | Portfolio",
+          "description": "Professional portfolio of Ahmad Shah, a Frontend Developer specializing in React.js, Bootstrap5, Tailwind CSS, and Material UI. Creating responsive and modern web applications with exceptional user experiences.",
+          "isPartOf": {
+            "@id": "https://syed-ahmad-global.github.io/portfolio/#website"
+          },
+          "about": {
+            "@id": "https://syed-ahmad-global.github.io/portfolio/#person"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://syed-ahmad-global.github.io/portfolio/imgs/og-image.png",
+            "width": 1200,
+            "height": 630,
+            "caption": "Ahmad Shah - Frontend Developer Portfolio"
+          },
+          "dateModified": "2024-11-02",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://syed-ahmad-global.github.io/portfolio/"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://syed-ahmad-global.github.io/portfolio/#service",
+          "name": "Frontend Development Services",
+          "description": "Professional frontend development services specializing in React.js, modern CSS frameworks, and responsive web design.",
+          "provider": {
+            "@id": "https://syed-ahmad-global.github.io/portfolio/#person"
+          },
+          "serviceType": [
+            "Frontend Development",
+            "React.js Development",
+            "Responsive Web Design",
+            "UI/UX Implementation",
+            "CSS Framework Development",
+            "Component Development",
+            "Web Application Development"
+          ],
+          "areaServed": "Worldwide",
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Frontend Development Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "React.js Development",
+                  "description": "Building modern web applications using React.js with component-based architecture"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Responsive Web Design",
+                  "description": "Creating mobile-first responsive websites using Bootstrap5, Tailwind CSS, and Material UI"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "UI/UX Implementation",
+                  "description": "Transforming designs into pixel-perfect, interactive web interfaces"
+                }
+              }
+            ]
+          }
+        }
+      ]
     }
     </script>
   </head>
