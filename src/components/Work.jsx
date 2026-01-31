@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import TabSelector from "./TabSelector";
+import zuzeeeLogo from "../assets/images/zuzeee_logo.webp";
 import techXLogo from "../assets/images/tech_axe_logo.webp";
 import medtronixPng from "../assets/images/Medtronix.webp";
 import servicesGroundPng from "../assets/images/serviceGround.webp";
@@ -37,7 +38,43 @@ const Work = () => {
                         <div className="relative">
                           <div>
                             <ul className="ml-10 border-l dark:border-gray-700">
-                              {/* Work Experience Entry 1 */}
+                              {/* Work Experience Entry - Zuzeee (Current) */}
+                              <li className="relative ml-10 py-4">
+                                <a
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="absolute -left-16 top-4 flex items-center justify-center rounded-full bg-white"
+                                  href="https://www.linkedin.com/company/zuzeee/posts/?feedView=all"
+                                >
+                                  <span className="relative flex shrink-0 overflow-hidden rounded-full size-12 border dark:border-gray-700">
+                                    <img
+                                      className="aspect-square h-full w-full bg-background object-contain"
+                                      alt="Zuzeee"
+                                      src={zuzeeeLogo}
+                                      loading="lazy"
+                                      draggable="false"
+                                    />
+                                  </span>
+                                </a>
+                                <div className="flex flex-1 flex-col justify-start gap-1">
+                                  <time className="text-xs dark:text-custom-gray text-custom-white">
+                                    08/2025 - Present
+                                  </time>
+                                  <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
+                                    Frontend Developer
+                                  </h2>
+                                  <p className="text-sm dark:text-custom-gray text-custom-white">
+                                    Zuzeee
+                                  </p>
+                                  <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
+                                    <li>
+                                      Designed and developed a responsive web application for managing taxi accounts and bookings.
+                                    </li>
+                                  </ul>
+                                </div>
+                              </li>
+
+                              {/* Work Experience Entry 2 */}
                               <li className="relative ml-10 py-4">
                                 <a
                                   target="_blank"
@@ -57,13 +94,13 @@ const Work = () => {
                                 </a>
                                 <div className="flex flex-1 flex-col justify-start gap-1">
                                   <time className="text-xs dark:text-custom-gray text-custom-white">
-                                    Jan 2024 - Current
+                                    01/2025 - 04/2025
                                   </time>
                                   <h2 className="font-semibold leading-none dark:text-custom-gray text-custom-white">
                                     Frontend Developer
                                   </h2>
                                   <p className="text-sm dark:text-custom-gray text-custom-white">
-                                    Tech Axe
+                                    The TechAxe
                                   </p>
                                   <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
@@ -78,7 +115,7 @@ const Work = () => {
                                 </div>
                               </li>
 
-                              {/* Work Experience Entry 2 */}
+                              {/* Work Experience Entry 3 */}
                               <li className="relative ml-10 py-4">
                                 <a
                                   target="_blank"
@@ -119,7 +156,7 @@ const Work = () => {
                                 </div>
                               </li>
 
-                              {/* Work Experience Entry 3 */}
+                              {/* Work Experience Entry 4 */}
                               <li className="relative ml-10 py-4">
                                 <a
                                   target="_blank"
