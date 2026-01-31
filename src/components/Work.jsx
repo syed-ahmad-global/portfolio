@@ -104,12 +104,10 @@ const Work = () => {
                                   </p>
                                   <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
-                                      Development of web applications using
-                                      ReactJS Bootstrap5 Tailwind CSS Material
-                                      UI
+                                      Developed responsive web applications using React.js, Bootstrap 5, Tailwind CSS, and Material UI.
                                     </li>
                                     <li>
-                                      Implemented latest technologies with web.
+                                      Implemented modern web technologies and best practices to enhance application performance.
                                     </li>
                                   </ul>
                                 </div>
@@ -145,12 +143,10 @@ const Work = () => {
                                   </p>
                                   <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
-                                      Developed and maintained frontend
-                                      applications using React.js.
+                                      Developed and maintained frontend applications using React.js, serving multiple active users.
                                     </li>
                                     <li>
-                                      Collaborated with designers to implement
-                                      UI/UX designs.
+                                      Collaborated with designers to implement pixel-perfect UI/UX designs across multiple projects.
                                     </li>
                                   </ul>
                                 </div>
@@ -186,13 +182,10 @@ const Work = () => {
                                   </p>
                                   <ul className="list-disc list-inside dark:text-custom-gray text-custom-white text-sm">
                                     <li>
-                                      Assisted in the development of web
-                                      applications using HTML, CSS, and
-                                      JavaScript.
+                                      Assisted in the development of web applications using HTML, CSS, and JavaScript during 4-month internship.
                                     </li>
                                     <li>
-                                      Gained hands-on experience with web
-                                      technologies.
+                                      Gained hands-on experience with modern web technologies and agile development practices.
                                     </li>
                                   </ul>
                                 </div>
