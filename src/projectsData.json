@@ -1,5 +1,23 @@
 [
   {
+    "title": "Physio",
+    "description": "A comprehensive physiotherapy patient management system with exercise program tracking, progress monitoring, and admin dashboard. Features frontend-only mode for development with mock data and full backend integration support. (Demo: Sign in with any email/password)",
+    "imageSrc": "imgs/projects/physio.webp",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Radix UI",
+      "React Query",
+      "Recharts",
+      "Express",
+      "PostgreSQL"
+    ],
+    "sourceLink": "https://github.com/syed-ahmad-global/physio-frontend",
+    "websiteLink": "https://physio-frontend-alpha.vercel.app/signin"
+  },
+  {
     "title": "Uranus",
     "description": "Uranus is fully responsive website. Main theme of this portfolio website of a company.",
     "imageSrc": "imgs/projects/uranus.webp",
