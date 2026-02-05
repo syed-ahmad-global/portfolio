@@ -1,5 +1,22 @@
 [
   {
+    "title": "C-Payment",
+    "description": "A modern cryptocurrency payment gateway platform featuring both user-facing interfaces and a comprehensive admin dashboard. Enables businesses to accept, process, and manage crypto payments with support for 300+ cryptocurrencies, real-time analytics, and secure transaction handling.",
+    "imageSrc": "imgs/projects/c-payment.webp",
+    "technologies": [
+      "React",
+      "Vite",
+      "Bootstrap",
+      "React Router",
+      "Formik",
+      "Yup",
+      "ApexCharts",
+      "React Toastify"
+    ],
+    "sourceLink": "https://github.com/syed-ahmad-global/c-payment",
+    "websiteLink": "https://c-payments.vercel.app/"
+  },
+  {
     "title": "Physio",
     "description": "A comprehensive physiotherapy patient management system with exercise program tracking, progress monitoring, and admin dashboard. Features frontend-only mode for development with mock data and full backend integration support. (Demo: Sign in with any email/password)",
     "imageSrc": "imgs/projects/physio.webp",
