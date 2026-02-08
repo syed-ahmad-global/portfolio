@@ -11,7 +11,7 @@ const Footer = () => {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("ahmad53.work@gmail.com");
+    navigator.clipboard.writeText("syed.ahmad.global@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
   };
@@ -62,7 +62,7 @@ const Footer = () => {
                 {hovered && (
                   <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex space-x-2 bg-white px-3 py-2 rounded shadow-md">
                     <a
-                      href="mailto:ahmad53.work@gmail.com"
+                      href="mailto:syed.ahmad.global@gmail.com"
                       className="text-gray-600 hover:text-blue-500 transition-colors duration-200"
                       tabIndex={0}
                     >

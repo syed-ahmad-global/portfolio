@@ -20,7 +20,7 @@ function Hero() {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("ahmad53.work@gmail.com");
+    navigator.clipboard.writeText("syed.ahmad.global@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
   };
@@ -87,7 +87,7 @@ function Hero() {
         </a>
         {/* Email Anchor for Smaller Screens */}
         <a
-          href="mailto:ahmad53.work@gmail.com"
+          href="mailto:syed.ahmad.global@gmail.com"
           className="md:hidden ml-3 pt-4 text-[#fafafa] dark:text-gray-700 "
         >
           <IoMail className="w-7 h-7 sm:w-7 sm:h-7" />
@@ -106,7 +106,7 @@ function Hero() {
           {hovered && (
             <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex space-x-2 bg-white dark:bg-gray-800 px-3 py-2 rounded shadow-md">
               <a
-                href="mailto:ahmad53.work@gmail.com"
+                href="mailto:syed.ahmad.global@gmail.com"
                 className="text-gray-600 dark:text-white hover:text-blue-500 dark:hover:text-blue-500 transition-colors duration-200"
                 tabIndex={0}
               >
